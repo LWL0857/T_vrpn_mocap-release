@@ -11,6 +11,33 @@ supported hardware can be found on
 - [ ] TODO
 
 #### Build From Source
+
+安装依赖
+
+```
+sudo apt-get install ros-foxy-vrpn
+```
+
+首先clone源码到ros2工作空间的src文件夹下，将clone的文件夹改名成vrpn_mocap功能包名
+
+在src文件夹同级目录进行
+
+```
+colcon build
+```
+
+然后
+
+```
+source install/setup.bash
+```
+
+```
+ros2 launch client.launch.yaml server:=<server ip> port:=<port>
+```
+
+
+
 1. Clone this repo into your ROS2 workspace
 2. Run `rosdep install --from-paths src -y --ignore-src` to install dependencies
 3. Run `colcon build`
